@@ -39,3 +39,22 @@ void Controller::HandleInput(bool &running, Snake &snake) const {
     }
   }
 }
+
+bool Controller::HandleEndInput() const {
+  SDL_Event e;
+  while (SDL_WaitEvent(&e)) {
+    if (e.type == SDL_KEYDOWN) {
+      switch (e.key.keysym.sym) {
+        case SDLK_ESCAPE:
+          return false;
+          break;
+        case SDLK_SPACE:
+          return true;
+          break;
+        default:
+          break;
+      }
+    }
+  }
+  return false;
+}
