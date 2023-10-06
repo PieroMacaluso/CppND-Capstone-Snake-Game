@@ -1,12 +1,16 @@
 #include "game.h"
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <filesystem>
 #include "SDL.h"
 
-Game::Game(std::size_t grid_width, std::size_t grid_height)
+Game::Game(std::size_t grid_width, std::size_t grid_height, std::string obstacle_file_path)
     : snake(grid_width, grid_height),
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
+  PlaceObstacles(obstacle_file_path);
   PlaceFood();
 }
 
@@ -25,7 +29,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food);
+    renderer.Render(snake, food, obstacles);
 
     frame_end = SDL_GetTicks();
 
@@ -58,7 +62,7 @@ void Game::PlaceFood() {
     y = random_h(engine);
     // Check that the location is not occupied by a snake item before placing
     // food.
-    if (!snake.SnakeCell(x, y)) {
+    if (!snake.SnakeCell(x, y) && !obstacles[x][y]) {
       food.x = x;
       food.y = y;
       return;
@@ -66,10 +70,31 @@ void Game::PlaceFood() {
   }
 }
 
+void Game::PlaceObstacles(std::string obstacles_path) {
+  std::cout << std::filesystem::current_path() << std::endl;
+  // Read obstacles from file
+  std::ifstream obstacles_file(obstacles_path);
+  std::string line;
+  while (std::getline(obstacles_file, line)) {
+    std::vector<bool> obstacle;
+    for (char c : line) {
+      obstacle.push_back(c == '1');
+    }
+    obstacles.push_back(obstacle);
+  }
+}
+
 void Game::Update() {
   if (!snake.alive) return;
 
   snake.Update();
+
+  // Check if snake is in an obstacle
+  int x = static_cast<int>(snake.head_x);
+  int y = static_cast<int>(snake.head_y);
+  if (obstacles[x][y]) {
+    snake.alive = false;
+  }
 
   int new_x = static_cast<int>(snake.head_x);
   int new_y = static_cast<int>(snake.head_y);
