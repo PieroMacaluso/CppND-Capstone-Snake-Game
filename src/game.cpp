@@ -85,7 +85,6 @@ void Game::PlaceFood()
 
 void Game::PlaceObstacles(std::string obstacles_path)
 {
-  std::cout << std::filesystem::current_path() << std::endl;
   // Read obstacles from file
   std::ifstream obstacles_file(obstacles_path);
   std::string line;
@@ -180,7 +179,6 @@ void Game::Update()
   // Check if there's powerup over here
   if (power != nullptr && power->x == new_x && power->y == new_y)
   {
-    std::cout << "Powerup taken" << std::endl;
     power->apply(snake);
     power.reset();
   }
