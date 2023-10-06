@@ -53,75 +53,75 @@ The extensions are:
 
 This README contains all the information required by the rubric:
 
-:white_check_mark: A README with instructions is included with the project.
+- [x] A README with instructions is included with the project.
 
-:white_check_mark: The README indicates which project is chosen.
+- [x] The README indicates which project is chosen.
 
-:white_check_mark: The README includes information about each rubric point addressed.
+- [x] The README includes information about each rubric point addressed.
 ### Compiling and Testing
 
 This can be tested by using the instructions [here](#basic-build-instructions).
 
-:white_check_mark: The submission must compile and run.
+- [x] The submission must compile and run.
 
 ### Loops, Functions, I/O
 
-:white_check_mark: The project demonstrates an understanding of C++ functions and control structures
+- [x] The project demonstrates an understanding of C++ functions and control structures
 
 It is possible to see modification and additional implementations that proves this in the code.
 
-:white_check_mark: The project reads data from a file and process the data, or the program writes data to a file.
+- [x] The project reads data from a file and process the data, or the program writes data to a file.
 
 This part is implemented to gather the map from a txt file. The code used can be found [here](https://github.com/PieroMacaluso/CppND-Capstone-Snake-Game/blob/master/src/game.cpp#L86-L101)
 
-:white_check_mark: The project accepts user input and processes the input.
+- [x] The project accepts user input and processes the input.
 
 The code gets the input of the user to make the snake do actions, but also to close/restart the game. In addition, at the start of the game we can put the name of the map we want to use as argument (e.g., `./SnakeGame map_2.txt`).
 
 ### Object Oriented Programming
 
-:white_check_mark: The project uses Object Oriented Programming techniques.
+- [x] The project uses Object Oriented Programming techniques.
 
-:white_check_mark: Classes use appropriate access specifiers for class members.
+- [x] Classes use appropriate access specifiers for class members.
 
-:white_check_mark: Class constructors utilize member initialization lists.
+- [x] Class constructors utilize member initialization lists.
 
-:white_check_mark: Classes abstract implementation details from their interfaces.
+- [x] Classes abstract implementation details from their interfaces.
 
-:white_check_mark: Classes encapsulate behavior.
+- [x] Classes encapsulate behavior.
 
-:white_check_mark: Classes follow an appropriate inheritance hierarchy.
+- [x] Classes follow an appropriate inheritance hierarchy.
 
-:negative_squared_cross_mark: Overloaded functions allow the same function to operate on different parameters.
+- [ ] Overloaded functions allow the same function to operate on different parameters.
 
-:white_check_mark: Derived class functions override virtual base class functions.
+- [x] Derived class functions override virtual base class functions.
 
 And example [here](https://github.com/PieroMacaluso/CppND-Capstone-Snake-Game/blob/master/src/power.h)
 
-:negative_squared_cross_mark: Templates generalize functions in the project.
+- [ ] Templates generalize functions in the project.
 
 ### Memory Management
 
-:white_check_mark: The project makes use of references in function declarations.
+- [x] The project makes use of references in function declarations.
 
 We have two functions that use pass-by-reference in the project code [here](https://github.com/PieroMacaluso/CppND-Capstone-Snake-Game/blob/master/src/power.cpp).
 
-:negative_squared_cross_mark: The project uses destructors appropriately.
+- [ ] The project uses destructors appropriately.
 
 
-:negative_squared_cross_mark: The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate.
-
-Not necessary for the project itself.
-
-:negative_squared_cross_mark: The project follows the Rule of 5.
+- [ ] The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate.
 
 Not necessary for the project itself.
 
-:negative_squared_cross_mark: The project uses move semantics to move data, instead of copying it, where possible.
+- [ ] The project follows the Rule of 5.
+
+Not necessary for the project itself.
+
+- [ ] The project uses move semantics to move data, instead of copying it, where possible.
 
 Not necessary for the project itself
 
-:white_check_mark: The project uses smart pointers instead of raw pointers.
+- [x] The project uses smart pointers instead of raw pointers.
 
 I used a `shared_ptr` for the powerups [here](https://github.com/PieroMacaluso/CppND-Capstone-Snake-Game/blob/master/src/game.h).
 
@@ -129,13 +129,13 @@ I used a `shared_ptr` for the powerups [here](https://github.com/PieroMacaluso/C
 
 The implementation of the points in this part can be seen here[here](https://github.com/PieroMacaluso/CppND-Capstone-Snake-Game/blob/master/src/game.cpp)
 
-:white_check_mark: The project uses multithreading.
+- [x] The project uses multithreading.
 
-:negative_squared_cross_mark: A promise and future is used in the project.
+- [ ] A promise and future is used in the project.
 
-:white_check_mark: A mutex or lock is used in the project.
+- [x] A mutex or lock is used in the project.
 
-:white_check_mark: A condition variable is used in the project.
+- [x] A condition variable is used in the project.
 
 
 ## CC Attribution-ShareAlike 4.0 International
