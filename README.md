@@ -61,7 +61,11 @@ This can be tested by using the instructions [here](#basic-build-instructions).
 
 :white_check_mark: The project demonstrates an understanding of C++ functions and control structures
 
+It is possible to see modification and additional implementations that proves this in the code.
 
+:white_check_mark: The project reads data from a file and process the data, or the program writes data to a file.
+
+This part is implemented to gather the map from a txt file. The code used can be found here https://github.com/PieroMacaluso/CppND-Capstone-Snake-Game/blob/master/src/game.cpp#L86-L101
 
 
 ## CC Attribution-ShareAlike 4.0 International
