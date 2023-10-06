@@ -1,6 +1,8 @@
 # CPPND: Capstone Snake Game Example
 
 - [CPPND: Capstone Snake Game Example](#cppnd-capstone-snake-game-example)
+  - [Introduction](#introduction)
+  - [Extensions](#extensions)
   - [Dependencies for Running Locally](#dependencies-for-running-locally)
   - [Basic Build Instructions](#basic-build-instructions)
   - [Comment to the Project Rubric](#comment-to-the-project-rubric)
@@ -12,14 +14,17 @@
     - [Concurrency](#concurrency)
   - [CC Attribution-ShareAlike 4.0 International](#cc-attribution-sharealike-40-international)
 
+## Introduction
 
 This is the implementation of Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). It is created by forking the original template of Udacity. The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
 
-<img src="snake_game.gif"/>
-
 As Capstone project, I decided to extend the Snake game, following the principles I have learned throughout this Nanodegree Program.
 
-The extensions are:
+<img src="snake_game.gif"/>
+
+## Extensions
+
+The extensions implemented are:
 
 - **Game stop/restart**: At the end of the game and after the joining of the threads the user can press ESC to exit, or SPACE to restart the game.
 - **Obstacles**: It is possible to load a map of obstacles and load it at the start of the game.
