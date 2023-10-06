@@ -17,9 +17,13 @@ This is the implementation of Capstone project in the [Udacity C++ Nanodegree Pr
 
 <img src="snake_game.gif"/>
 
-The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
-
 As Capstone project, I decided to extend the Snake game, following the principles I have learned throughout this Nanodegree Program.
+
+The extensions are:
+
+- **Game stop/restart**: At the end of the game and after the joining of the threads the user can press ESC to exit, or SPACE to restart the game.
+- **Obstacles**: It is possible to load a map of obstacles and load it at the start of the game.
+- **PowerUps**: there will be two power-ups. SpeedUp (red one) that will increase the speed of the snake and SlowDown (green one) that will decrease the speed of the snake.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
