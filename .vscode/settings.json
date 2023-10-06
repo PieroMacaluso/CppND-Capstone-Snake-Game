@@ -54,9 +54,9 @@
         "typeinfo": "cpp",
         "filesystem": "cpp",
         "codecvt": "cpp",
-        "condition_variable": "cpp",
-        "cstring": "cpp",
         "iomanip": "cpp",
-        "mutex": "cpp"
+        "mutex": "cpp",
+        "condition_variable": "cpp",
+        "cstring": "cpp"
     }
 }
